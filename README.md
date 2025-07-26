@@ -229,7 +229,7 @@ The system has been tested with:
 
 **Common Issues:**
 
-1. **No PDF files found**: Ensure PDFs are in the `input/` directory
+1. **No PDF files found**: Ensure PDFs are in the `pdfs/` directory
 2. **Memory errors**: Reduce batch size in configuration
 3. **Slow processing**: Check available system resources
 4. **Import errors**: Verify all dependencies are installed
