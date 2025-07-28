@@ -79,6 +79,9 @@ source .venv/bin/activate
 # Install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
+
+# Run the application
+python .\main.py
 ```
 
 #### Method 2: Docker Setup (Recommended)
