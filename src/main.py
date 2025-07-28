@@ -82,18 +82,20 @@ class PersonaDrivenProcessor:
                 logger.error("No successful results to generate output")
                 return False
             
-            # Use the format_consolidated_output method from output_formatter
-            # Extract scored sections from each successful result
-            all_scored_sections = []
+            # Prepare document data for the output formatter
+            all_document_data = []
             for filename, result in successful_results:
-                if result and 'scored_sections' in result:
-                    # Add document identifier to each scored section
-                    for section in result['scored_sections']:
-                        section['document'] = filename
-                    all_scored_sections.extend(result['scored_sections'])
+                if result:
+                    document_data = {
+                        'document': filename,
+                        'processed_doc': result.get('processed_doc', {}),
+                        'scored_sections': result.get('scored_sections', [])
+                    }
+                    all_document_data.append(document_data)
             
+            # Use the updated format_consolidated_output method
             output_data = self.output_formatter.format_consolidated_output(
-                all_scored_sections,
+                all_document_data,
                 input_documents,
                 self.persona,
                 self.job,

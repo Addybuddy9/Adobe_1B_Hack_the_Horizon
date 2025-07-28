@@ -50,10 +50,11 @@ Thumbs.db
 logs/
 
 # Data files (keep structure but exclude content)
-input/*
-!input/.gitkeep
-output/*
-!output/.gitkeep
+# Note: input_json and pdfs are needed for the application
+# input/*
+# !input/.gitkeep
+# output/* - Allow output directory to be created
+# !output/.gitkeep
 
 # Cache
 cache/
@@ -62,7 +63,7 @@ cache/
 
 # Documentation
 docs/
-*.md
+# *.md - Keep README.md for documentation
 LICENSE
 
 # CI/CD
