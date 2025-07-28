@@ -1,8 +1,14 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+
+# C extensions
+*.pyd
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -19,50 +25,53 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# Virtual Environment
-.venv/
+# Virtual environments
+.env
+.venv
+env/
 venv/
 ENV/
-env/
-.env
+env.bak/
+venv.bak/
 
-# IDE
+# IDEs and editors
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-
-# Docker
-.dockerignore
-
-# Output files (keep directory structure but not outputs)
-output/*.json
-!output/README.md
 
 # Logs
 *.log
+logs/
+
+# Data files (keep structure but exclude content)
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
 
 # Cache
-.cache/
+cache/
 .pytest_cache/
-
-# Coverage reports
-htmlcov/
 .coverage
-.coverage.*
-coverage.xml
 
-# mypy
-.mypy_cache/
+# Documentation
+/docs/
+*.md
+LICENSE
+
+# CI/CD
+.github/
+.travis.yml
+.circleci/
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
